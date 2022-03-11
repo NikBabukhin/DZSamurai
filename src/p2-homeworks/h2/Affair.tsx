@@ -1,15 +1,17 @@
 import React from 'react'
+import {AffairType} from "./HW2";
 
 type AffairPropsType = {
     key:number// key не нужно типизировать
     priority: string
-    affair: string
+    affair: AffairType
     deleteAffairCallback: (p:number)=>void // need to fix any
 }
 
+
 function Affair(props: AffairPropsType) {
     const deleteCallback = () => {
-        props.deleteAffairCallback(props.key)
+        props.deleteAffairCallback(props.affair._id)
     }
 
     const simpleStyle = {
@@ -18,9 +20,11 @@ function Affair(props: AffairPropsType) {
         justifyContent: 'space-between'
     }
 
+
+
     return (
-        <div style={simpleStyle}>
-            <span>{props.affair}</span>
+        <div style={simpleStyle} key={props.affair._id}>
+            <span>{props.affair.name}</span>
             <span> {props.priority}</span>
 
             <button onClick={deleteCallback}>X</button>
