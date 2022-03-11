@@ -2,10 +2,10 @@ import React from 'react'
 import {AffairType} from "./HW2";
 
 type AffairPropsType = {
-    key:number// key не нужно типизировать
+    key: number// key не нужно типизировать
     priority: string
     affair: AffairType
-    deleteAffairCallback: (p:number)=>void // need to fix any
+    deleteAffairCallback: (p: number) => void //
 }
 
 
@@ -19,7 +19,6 @@ function Affair(props: AffairPropsType) {
         display: 'flex',
         justifyContent: 'space-between'
     }
-
 
 
     return (
