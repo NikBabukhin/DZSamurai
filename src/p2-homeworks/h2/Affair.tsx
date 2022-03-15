@@ -32,3 +32,12 @@ function Affair(props: AffairPropsType) {
 }
 
 export default Affair
+
+
+const simpleArray = [1, 2, 3, 4, 5, 6];
+
+const sortFunct = (arr: Array<any>, num: number) => {
+    return arr.filter(el => el > num)
+}
+
+sortFunct(simpleArray, 5);
