@@ -1,9 +1,9 @@
 .superInput {
-
+    background-color: rgba(120, 120, 255, .5);
 }
 
 .errorInput {
-    border: 3px solid lime;
+    border: 3px solid rgb(255, 70, 120, .2);
     background: red;
 }
 
