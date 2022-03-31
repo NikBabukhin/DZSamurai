@@ -1,3 +1,46 @@
 .App {
-
+    position: relative;
 }
+
+.nav__main__wrapper {
+    position: relative;
+    width: 600px;
+    height: 60px;
+}
+
+.nav__wrapper {
+    margin-left: 0;
+    position: absolute;
+    width: 800px;
+    height: 50px;
+    left: -450px;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+.nav__wrapper:hover {
+    left: 0px;
+}
+
+.nav__bar {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+    font-size: 20px;
+    width: 500px;
+    height: 30px;
+}
+
+.nav__bar a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav__bar:last-child:after {
+    content: '<';
+    margin-left: 150px;
+    font-size: 25px;
+}
+
