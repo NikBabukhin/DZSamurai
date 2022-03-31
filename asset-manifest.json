@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/DZSamurai/static/css/main.ad9b7d8e.css",
-    "main.js": "/DZSamurai/static/js/main.939614fb.js",
+    "main.css": "/DZSamurai/static/css/main.763c4f3b.css",
+    "main.js": "/DZSamurai/static/js/main.5ee307f8.js",
     "index.html": "/DZSamurai/index.html",
-    "main.ad9b7d8e.css.map": "/DZSamurai/static/css/main.ad9b7d8e.css.map",
-    "main.939614fb.js.map": "/DZSamurai/static/js/main.939614fb.js.map"
+    "main.763c4f3b.css.map": "/DZSamurai/static/css/main.763c4f3b.css.map",
+    "main.5ee307f8.js.map": "/DZSamurai/static/js/main.5ee307f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad9b7d8e.css",
-    "static/js/main.939614fb.js"
+    "static/css/main.763c4f3b.css",
+    "static/js/main.5ee307f8.js"
   ]
 }
