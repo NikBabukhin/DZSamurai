@@ -8,9 +8,9 @@ function Header() {
         <div className={s.nav__main__wrapper}>
             <nav className={s.nav__wrapper}>
                 <ul className={s.nav__bar}>
-                    <li><NavLink to={PATH.PRE_JUNIOR}>Pre-Junior</NavLink></li>
-                    <li><NavLink to={PATH.JUNIOR}>Junior</NavLink></li>
-                    <li><NavLink to={PATH.JUNIOR_PLUS}>Junior-Plus</NavLink></li>
+                    <li><NavLink to={PATH.PRE_JUNIOR} className={({isActive}) => isActive ? s.active : undefined }>Pre-Junior</NavLink></li>
+                    <li><NavLink to={PATH.JUNIOR} className={({isActive}) => isActive ? s.active : undefined }>Junior</NavLink></li>
+                    <li><NavLink to={PATH.JUNIOR_PLUS} className={({isActive}) => isActive ? s.active : undefined }>Junior-Plus</NavLink></li>
                 </ul>
             </nav>
         </div>

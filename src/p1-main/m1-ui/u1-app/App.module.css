@@ -36,6 +36,11 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    color: black;
+}
+
+.nav__bar a.active {
+    color: chocolate;
 }
 
 .nav__bar:last-child:after {
