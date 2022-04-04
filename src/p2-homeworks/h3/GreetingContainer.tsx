@@ -1,6 +1,7 @@
 import React, {ChangeEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from "./HW3";
+import style from './Greeting.module.css'
 
 
 type GreetingContainerPropsType = {
@@ -17,9 +18,9 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const [name, setName] = useState<string>('')
     const [error, setError] = useState<string>('')
 
-    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
+    const setNameCallback = (value:string) => {
         setError('')
-        setName(e.currentTarget.value)
+        setName(value)
     }
     const addUser = () => {
         if (!name) {
@@ -41,6 +42,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             error={error}
             totalUsers={totalUsers}
         />
+
     )
 }
 

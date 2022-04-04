@@ -16,6 +16,9 @@ function Message(props: MessageDataType) {
                 <h3 className={style.message__author}>{props.name}</h3>
                 <div className={style.message__text}>{props.message}</div>
                 <div className={style.message__time}>{props.time}</div>
+                <div className={style.square}>
+                    <div className={style.circle}></div>
+                </div>
             </div>
         </div>
     )

@@ -1,7 +1,32 @@
-.someClass {
+.greeting__wrapper {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    position: relative;
+}
 
+.greeting__wrapper input {
+    padding: 10px;
+    outline: none;
+}
+
+.greeting__wrapper input::placeholder {
+    font-style: italic;
+    font-weight: 900;
+}
+
+.total__users {
+    font-weight: 700;
+    font-size: 25px;
 }
 
 .error {
     border: 1px solid red;
+}
+
+.error__span {
+    position: absolute;
+    top: -40px;
+    color: red;
+    font-size: 20px;
 }
