@@ -74,4 +74,27 @@
 h3 {
     font-style: italic;
     font-weight: 900;
+    padding-left: 20px;
+}
+
+.containerHW6 {
+    width: 40%;
+}
+
+.superSpanClass {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.superInputClass {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: inherit;
+    background: rgba(0,0,0,0);
+    border: none;
+    outline: none;
 }

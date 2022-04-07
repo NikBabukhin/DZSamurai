@@ -1,6 +1,6 @@
 .default {
     width: 20%;
-    padding: 5px;
+    padding: 5px 15px;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 2px;
@@ -9,15 +9,16 @@
     border-radius: 5px;
     border: none;
     transition: all .5s linear;
+    margin: 0 10px;
 }
 
 .default:hover {
     cursor: pointer;
     font-weight: 900;
-    background-color: rgba(41,41,41, .5);
+    background-color: rgba(41, 41, 41, .5);
     letter-spacing: 4px;
+    padding: 5px 8px;
 }
-
 
 .red {
     background: red;
