@@ -46,7 +46,9 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         onDoubleClick && onDoubleClick(e)
     }
 
-    const spanClassName = `${'сделать красивый стиль для спана'} ${className}`
+    const spanClassName = className
+    console.log(restProps.value)
+
 
     return (
         <>
@@ -68,7 +70,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                         {...restSpanProps}
                     >
                         {/*если нет захардкодженного текста для спана, то значение инпута*/}
-                        {children || restProps.value}
+                        {`${String.fromCharCode(9998)} ${children || restProps.value}`}
                     </span>
                 )
             }
