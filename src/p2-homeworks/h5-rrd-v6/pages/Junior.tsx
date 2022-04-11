@@ -1,5 +1,9 @@
+import HW7 from "../../h7/HW7";
+
 export const Junior=()=> {
     return (
-        <div>It's page Junior</div>
+        <div>
+            <HW7/>
+        </div>
     )
 }

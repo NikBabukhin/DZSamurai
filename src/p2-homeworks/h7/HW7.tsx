@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
 import SuperSelect from './common/c5-SuperSelect/SuperSelect'
 import SuperRadio from './common/c6-SuperRadio/SuperRadio'
+import style from './../../p1-main/m1-ui/u1-app/App.module.css'
 
-const arr = ['x', 'y', 'z']
+const arr = ['x', 'y', 'z'];
 
 function HW7() {
-    const [value, onChangeOption] = useState(arr[1])
+    const [value, onChangeOption] = useState(arr[0])
 
     return (
         <div>
@@ -13,15 +14,20 @@ function HW7() {
             homeworks 7
 
             {/*should work (должно работать)*/}
-            <div>
+            <div className={style.select__wrapper}>
                 <SuperSelect
+                    optionStyle={style.super__selectOption}
+                    className={style.super__select}
                     options={arr}
                     value={value}
                     onChangeOption={onChangeOption}
                 />
             </div>
-            <div>
+            <div className={style.radio__wrapper}>
                 <SuperRadio
+                    activeInputClass={style.activeInputRadioClass}
+                    radioInputStyle={style.super__radioInputStyle}
+                    radioStyle={style.super__radioLabel}
                     name={'radio'}
                     options={arr}
                     value={value}
