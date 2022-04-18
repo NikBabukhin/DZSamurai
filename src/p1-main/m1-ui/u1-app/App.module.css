@@ -149,3 +149,23 @@ h3 {
 .activeInputRadioClass {
     color: gold;
 }
+
+.sort__buttonsWrapper {
+    display: flex;
+    width: 30%;
+    padding: 20px;
+}
+
+.users__listWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 30%;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.user__item {
+    display: flex;
+    justify-content: space-between;
+}

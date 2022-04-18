@@ -9,30 +9,32 @@ function HW7() {
     const [value, onChangeOption] = useState(arr[0])
 
     return (
-        <div>
+        <div className={style.container__wrapper}>
             <hr/>
-            homeworks 7
+            <h3>homeworks 7</h3>
 
             {/*should work (должно работать)*/}
-            <div className={style.select__wrapper}>
-                <SuperSelect
-                    optionStyle={style.super__selectOption}
-                    className={style.super__select}
-                    options={arr}
-                    value={value}
-                    onChangeOption={onChangeOption}
-                />
-            </div>
-            <div className={style.radio__wrapper}>
-                <SuperRadio
-                    activeInputClass={style.activeInputRadioClass}
-                    radioInputStyle={style.super__radioInputStyle}
-                    radioStyle={style.super__radioLabel}
-                    name={'radio'}
-                    options={arr}
-                    value={value}
-                    onChangeOption={onChangeOption}
-                />
+            <div className={style.container}>
+                <div className={style.select__wrapper}>
+                    <SuperSelect
+                        optionStyle={style.super__selectOption}
+                        className={style.super__select}
+                        options={arr}
+                        value={value}
+                        onChangeOption={onChangeOption}
+                    />
+                </div>
+                <div className={style.radio__wrapper}>
+                    <SuperRadio
+                        activeInputClass={style.activeInputRadioClass}
+                        radioInputStyle={style.super__radioInputStyle}
+                        radioStyle={style.super__radioLabel}
+                        name={'radio'}
+                        options={arr}
+                        value={value}
+                        onChangeOption={onChangeOption}
+                    />
+                </div>
             </div>
 
             <hr/>

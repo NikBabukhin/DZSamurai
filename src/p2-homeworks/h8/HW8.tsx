@@ -1,10 +1,17 @@
 import React, {useState} from 'react'
-import {homeWorkReducer} from './bll/homeWorkReducer'
+import {checkAgeAC, homeWorkReducer, sortDownAC, sortUpAC} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import style from "../../p1-main/m1-ui/u1-app/App.module.css";
 
-// export type UserType =
+type UserItemType = {
+    _id: number,
+    name: string,
+    age: number,
+}
 
-const initialPeople = [
+export type UserType = UserItemType[]
+
+const initialPeople: UserType = [
     {_id: 0, name: 'Кот', age: 3},
     {_id: 1, name: 'Александр', age: 66},
     {_id: 2, name: 'Коля', age: 16},
@@ -14,28 +21,37 @@ const initialPeople = [
 ]
 
 function HW8() {
-    const [people, setPeople] = useState<any>(initialPeople) // need to fix any
+    const [people, setPeople] = useState<UserType>(initialPeople) // need to fix any
 
     // need to fix any
     const finalPeople = people.map((p: any) => (
-        <div key={p._id}>
-            some name, age
+        <div key={p._id} className={style.user__item}>
+            <span style={{color: 'white'}}>{p.name}</span>
+            <span style={{color: `${p.age >= 18 ? 'green' : 'red'}`}}>{p.age}</span>
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'up'}))
+    const sortUp = () => setPeople(homeWorkReducer(initialPeople, sortUpAC()))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, sortDownAC()))
+    const checkAge = () => setPeople(homeWorkReducer(initialPeople, checkAgeAC()))
 
     return (
-        <div>
+        <div className={style.container__wrapper}>
             <hr/>
-            homeworks 8
+            <h3>homeworks 8</h3>
 
             {/*should work (должно работать)*/}
-            {finalPeople}
+            <div className={style.container}>
+                <div className={style.users__listWrapper}>
+                    {finalPeople}
+                </div>
+                <div className={style.sort__buttonsWrapper}>
+                    <SuperButton onClick={sortUp}>sort up</SuperButton>
+                    <SuperButton onClick={sortDown}>sort down</SuperButton>
+                    <SuperButton onClick={checkAge}>check18</SuperButton>
+                </div>
+            </div>
 
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
-            check 18
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
