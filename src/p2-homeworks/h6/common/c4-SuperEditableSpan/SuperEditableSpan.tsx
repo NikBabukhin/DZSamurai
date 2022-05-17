@@ -13,7 +13,7 @@ type SuperEditableSpanType = DefaultInputPropsType & { // и + ещё пропс
     onEnter?: () => void
     error?: string
     spanClassName?: string
-
+    changeValue?:(value:string)=>void,
     spanProps?: DefaultSpanPropsType // пропсы для спана
 }
 
@@ -22,6 +22,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         autoFocus, // игнорировать изменение этого пропса
         onBlur,
         onEnter,
+        changeValue,
         spanProps,
 
         ...restProps// все остальные пропсы попадут в объект restProps
@@ -32,7 +33,6 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
 
     const onEnterCallback = () => {
         setEditMode(false)
-
         onEnter && onEnter()
     }
     const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -47,8 +47,6 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
     }
 
     const spanClassName = className
-    console.log(restProps.value)
-
 
     return (
         <>
